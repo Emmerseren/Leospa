@@ -1,0 +1,56 @@
+
+.footer{
+    margin-top: 3em;
+    background-color: rgb(255,249,248) ;
+    
+    span {
+        display: none;
+    }
+    
+    .footer__Logos{
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+
+
+        img{
+            height: 20px;
+            border-right: 1px black solid;
+            padding-right: 1em;
+        }
+    }
+
+    .footer__Data{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        padding: 3em;
+        text-align: center;
+        div{
+            font-family:  "Circular-Loom"; 
+            padding: 10px;
+            p{
+                font-weight: 600;
+            }
+        }
+    }
+
+    nav{
+        display: grid;
+        gap: 2em;
+        padding: 3em;
+        justify-content: center;
+        
+        img{
+            justify-self: center;
+
+        }
+        
+        ul{
+            justify-self: center;
+            gap: 5em;
+            
+        }
+    }
+}
+
+

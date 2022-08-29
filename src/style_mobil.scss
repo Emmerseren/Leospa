@@ -1,0 +1,157 @@
+$base__Color: rgb(255, 129, 126);
+$base__ColorHover: rgb(247, 110, 107);
+$logo__Background: #fcf5ee;
+$logo__BackgroundHover: #f9d1d1;
+
+
+//Remove items over 992px 
+@media screen and (min-width: 992px){
+
+    .burger__Menu{
+        display: none;
+      
+    }
+
+    .burger__Modal{
+        display: none;
+    }
+
+    .burger__Close{
+        display: none;
+    }
+    
+  
+    
+}
+@media screen and (max-width: 992px){
+
+    nav{
+        grid-row: 1/2;
+    }
+
+    //burger
+
+    .burger__Close{
+        height: fit-content;
+        width: fit-content;
+        font-size: 5em;
+        padding: 10px;
+        justify-self: end;
+        cursor: pointer;
+    }
+    .burger__Close:hover{
+        color: $base__ColorHover;
+    }
+    .burger__Modal{
+        background-color: white;
+        box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.262);
+        display: grid;
+        z-index: 1;
+        position: fixed;
+        right: 0;
+
+    .burger__List{
+        list-style: none;
+        display: grid;
+        padding: 1em 3em 1em 3em;
+        gap: 3em;
+        font-size: xx-large;
+        
+      li{
+        a{
+                color: black;
+                text-decoration: none;
+        }
+        a:hover{
+            color: $base__ColorHover;
+        }
+      }
+        
+    }
+    
+}
+    
+.burger__Menu{
+height: fit-content;
+width: fit-content;
+padding: 10px;
+font-size: 5em;
+justify-self: end;
+cursor: pointer;
+grid-column: 3/4;
+}
+ .burger__Menu:hover{
+        color: $base__ColorHover;
+    }
+   
+    .list{
+        display: none;
+    }
+
+    
+    //hero mobil
+
+    .hero__Spa{
+        display: none;
+    }
+
+    .hero__Container{
+        grid-column: 2/4;
+        
+        .heroText__Content{
+
+        .link__Container{
+            display: grid;
+            grid-template-rows: repeat(2, 1fr) ;
+            gap: 1em;
+            width: fit-content;
+
+            .hero__Reserve{
+                grid-row: 1/2;
+                font-size: 2em;
+                grid-column: 1/2;
+            }
+
+            .play__Logo{
+                grid-row: 2/3;
+                font-size: 2em;
+                justify-self: start;
+                
+            }
+
+            .play__Text{
+                grid-row: 2/3;
+                font-size: 2em;
+                grid-column: 1/2;
+            }
+        }
+    }
+}
+
+
+    //Team 
+
+    .team{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+
+        .team__User{
+            justify-self: normal;
+        }
+    }
+
+    //Procedures 
+.procedure__Container{
+
+    .card__Grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        width: 100%;
+        justify-self: normal;
+        .card{
+            justify-self: normal;
+            width: auto;
+        }
+    }
+}
+}

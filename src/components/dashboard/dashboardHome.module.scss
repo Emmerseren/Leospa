@@ -1,0 +1,139 @@
+
+@import "../../varibles.scss";
+
+*{
+  font-family: "Circular-Loom";
+}
+.edit{
+  width: fit-content;
+  height: fit-content;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  align-self: center;
+  justify-self: end;
+  cursor: pointer;
+  text-decoration: none;
+  color: $logo__Background;
+  
+}
+
+.select__One{
+  border-radius: 10px;
+  padding: 10px;
+  height: fit-content;
+  width: fit-content;
+  background-color: $base__Color;
+  color: $logo__Background;
+  border: solid $logo__Background;
+  
+  
+  
+}
+
+.dashboard__Home{
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: grid;
+  gap: 1em;
+  padding: 1em;
+  
+    .heroData__Container{
+        display: grid;
+        background-color: $base__Color;
+        color: $logo__Background;
+        box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.262);
+     
+        
+        
+        
+        div{
+          display: grid;
+          grid-template-rows: 1fr ;
+          grid-template-columns: 3fr 1fr;
+          gap: 1em;
+          border-bottom: $logo__Background solid;
+          padding: 1em;
+
+          p:nth-of-type(2){
+            grid-row: 2/3;
+            grid-column: 1/2;
+            align-self: center;
+          }
+          p:nth-of-type(1){
+            align-self: center;
+            grid-row: 1/2;
+            grid-column: 1/2;
+            font-weight: bolder;
+            width: fit-content;
+            border-bottom: solid $logo__Background 2px;
+          }
+    
+          }
+          
+    .icons{
+      display: flex;
+      justify-content: space-between;
+     
+    }
+
+  }
+  .form{
+    display: grid;
+    grid-auto-flow: column;
+    background-color: $logo__Background;
+    grid-template-rows: 1fr 1fr;
+    box-shadow: 3px 2px 3px 2px rgba(255, 128, 126, 0.503);
+    padding: 2em;
+    gap: 1em;
+    
+
+    div{
+      display: grid;
+      padding: 1em;
+      height: fit-content;
+    }
+ 
+    
+    button{
+      padding: 1em 0.5em;
+      background-color: $base__Color;
+      color: $logo__Background;
+      border: $logo__Background solid;
+      height: fit-content;
+      border-radius: 10px;
+      cursor: pointer;
+      grid-row: 1/-1;
+      align-self: center;
+
+      &:hover{
+        background-color: $base__ColorHover;
+      }
+    }
+    
+    label{
+      color: $base__Color;
+    }
+    textarea{
+      padding: 1em 0.5em;
+      border-radius: 10px;
+      width: 100%;
+      background-color: $base__ColorHover;
+      font-size: x-large;
+      color: white;
+      resize: none;
+      justify-self: center;
+      align-items: center;
+      border: solid 2px black;
+      width: 100%;
+      height: 100%;
+      outline: $logo__Background solid 4px black ;
+      &::placeholder{
+        color: $logo__Background;
+      }
+    }
+  }
+
+  
+  
+}
+  

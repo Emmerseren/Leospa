@@ -1,0 +1,100 @@
+
+$base__Color: rgb(255, 129, 126);
+$base__ColorHover: rgb(247, 110, 107);
+$logo__Background: #fcf5ee;
+$logo__BackgroundHover: #f9d1d1;
+
+
+nav{
+    
+    
+}
+
+.login{
+    display: grid;
+    height: 100vh;
+  
+  
+    
+    
+  
+    .login__Container{
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    box-shadow: 3px 2px 3px 2px rgba(255, 128, 126, 0.503);
+    padding: 2em;
+    gap: 2em;
+  
+    form{
+      display: grid;
+      gap: 2em;
+  
+      input{
+        padding: 1em 0.5em;
+        border-radius: 10px;
+      }
+    }
+  
+    input:focus{
+      background-color: $base__ColorHover;
+    }
+    
+  
+    .login__Title{
+      font-family: "Circular-Loom";
+      font-size: xx-large;
+      justify-self: center;
+      
+  
+    }
+  
+      .email{
+        border: none;
+        font-size: xx-large;
+        color: white;
+        background-color: $base__Color;
+      }
+  
+      .password{
+        border: none;
+        font-size: xx-large;
+        color: white;
+        background-color: $base__Color;
+  
+       
+      }
+  
+      
+  
+      ::placeholder{
+        color: white;
+      }
+  
+      .login__Submit{
+        width: fit-content;
+        border: none;
+        font-size: xx-large;
+        color: white;
+        background-color:$base__Color;
+        padding: 10px 20px;
+        border-radius: 10px;
+        grid-row: 3/4;
+        grid-column: 1/1;
+        border: 3px solid transparent;
+  
+        
+      }
+      .login__Submit:hover{
+        background-color: $base__ColorHover;
+        border: 3px black solid;
+        
+      }
+    }  
+  
+    .login__Jasmine{
+      grid-row: 3/4;
+      grid-column: 1/1;
+      justify-self: end;
+    }
+  }

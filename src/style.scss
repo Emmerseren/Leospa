@@ -1,0 +1,695 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+//FONTS
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Circular-Loom";
+
+  src: url("https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2")
+    format("woff2");
+}
+@font-face {
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Circular-Loom";
+
+  src: url("https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2")
+    format("woff2");
+}
+@font-face {
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Circular-Loom";
+
+  src: url("https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2")
+    format("woff2");
+}
+@font-face {
+  font-weight: 900;
+  font-style: normal;
+  font-family: "Circular-Loom";
+
+  src: url("https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2")
+    format("woff2");
+}
+//COLORS
+$base__Color: rgb(255, 129, 126);
+$base__ColorHover: rgb(247, 110, 107);
+$logo__Background: #fcf5ee;
+$logo__BackgroundHover: #f9d1d1;
+//SPINNER
+.spinner {
+  animation: rotation 1s infinite linear;
+  height: 100px;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+//NAV
+
+nav {
+  display: flex;
+  padding-top: 1em;
+  grid-column: 2/3;
+  justify-content: space-between;
+  gap: 2em;
+
+
+
+  .logo {
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    align-items: end;
+    gap: 1em;
+
+    li {
+      a {
+        font-family: "Circular-Loom";
+        font-size: 1vw;
+        font-weight: 500;
+        color: black;
+        text-decoration: none;
+      }
+      a:hover{
+          color: $base__Color;
+      }
+    }
+  } //ul END
+} // NAV END
+//HEADER HERO
+
+.youtube__Modal {
+  background-color: rgb(255, 255, 255);
+  height: fit-content;
+  width: fit-content;
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.262);
+  padding: 1.5em;
+  display: grid;
+  position: fixed;
+  z-index: 10;
+  margin: auto;
+  left: 30%;
+  top: 35%;
+
+  .close__Modal {
+    background-color: $base__Color;
+    display: inline-block;
+    color: white;
+    padding: 1em;
+    width: fit-content;
+    height: fit-content;
+    font-family: "Circular-Loom";
+    font-size: larger;
+    border: none;
+    border-radius: 50%;
+    justify-self: center;
+    margin-top: 1em;
+    display: flex;
+  }
+  .close__Modal:hover {
+    background-color: $base__ColorHover;
+  }
+}
+header {
+  display: grid;
+  grid-template-columns: 20% 40% 40%;
+
+  .hero__Leaf {
+    grid-column: 1/2;
+    height: auto;
+
+    img {
+      width: 80%;
+    }
+  }
+}
+
+.hero__Container {
+  display: grid;
+  margin-top: 3em;
+  padding-right: 5em;
+  //IMAGES
+
+  .hero__Spa {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: auto;
+    width: 40vw;
+  }
+
+  .heroText__Content {
+    align-self: center;
+    display: grid;
+    gap: 2em;
+
+    h1 {
+      color: $base__Color;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: 3rem;
+      font-weight: 600;
+    }
+
+    .link__Container {
+      display: flex;
+      align-items: center;
+      gap: 2em;
+
+      .hero__Reserve {
+        background-color: $base__Color;
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 1em;
+        width: fit-content;
+        height: fit-content;
+        font-family: "Circular-Loom";
+        cursor: pointer;
+      }
+
+      .hero__Reserve:hover {
+        background-color: $base__ColorHover;
+      }
+      .play__Text {
+        font-family: "Circular-Loom";
+        color: black;
+        font-size: small;
+        cursor: pointer;
+      
+      }
+      .play__Text:hover{
+        color: $base__Color;
+    }
+
+      .play__Logo {
+        background-color: $logo__Background;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 50%;
+        padding: 5px;
+
+        span {
+          color: $base__Color;
+          font-size: 2em;
+          display: flex;
+        }
+      }
+
+      .play__Logo:hover {
+        background-color: $logo__BackgroundHover;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    } // link__Container END
+  } //Hero__Content END
+} //Hero__Container END
+
+//ABOUT
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  text-align: center;
+  padding: 5em 5em 0 5em;
+
+  .china__Rose {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: end;
+  }
+
+  .jasmine {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    justify-self: end;
+  }
+
+  .butterfly__Container {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: center;
+    align-self: center;
+
+    .about__Title {
+      padding-top: 15px;
+      font-family: "Circular-Loom";
+      font-weight: 300;
+    }
+  }
+
+  .about__TextContainer {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    .about__Title2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding-bottom: 15px;
+    }
+  }
+  .about__Content {
+    font-family: "Circular-Loom";
+    opacity: 80%;
+  }
+
+  .read__MoreButton {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    background-color: $base__Color;
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    font-family: "Circular-Loom";
+    font-size: small;
+    font-weight: 200;
+    padding: 1em;
+    border-radius: 25px;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .read__MoreButton:hover{
+      background-color: $base__ColorHover;
+  }
+} // ABOUT END
+
+.image__AboutGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+} //IMAGE GRID
+
+.procedure__Container {
+  padding: 4em;
+  display: grid;
+  
+
+  .procedure__TextContainer {
+    padding: 4em;
+    p {
+      text-align: center;
+    }
+    .procedure__Title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .procedure__Content {
+      padding-top: 2em;
+      opacity: 80%;
+    }
+  }
+
+  .card__Grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2em;
+    width: fit-content;
+    justify-self: center;
+
+    .card {
+      justify-self: center;
+      width: fit-content;
+      border: 1px solid rgba(128, 128, 128, 0.395);
+      display: grid;
+      padding: 1em;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      p {
+        text-align: center;
+        padding: 10px;
+      }
+
+      .card__Title {
+        font-size: 1.5em;
+        font-weight: 500;
+      }
+
+      .card__Content {
+        opacity: 80%;
+      }
+      .card__Button {
+        background-color: rgb(49, 56, 59);
+        color: white;
+        width: fit-content;
+        padding: 0.7em 2em 0.7em 2em;
+        justify-self: center;
+        margin-top: 1em;
+        border-radius: 25px;
+        font-family: "Circular-Loom";
+        font-size: small;
+        font-weight: 500;
+      }
+    } //CARD END
+  }
+} // PROCEDURE CONTAINER END
+
+// RECOMMENDATIONS
+
+//Slider
+
+.slider-container {
+  background-color: rgb(255, 249, 248);
+}
+.next {
+  display: none;
+}
+
+.prev {
+  display: none;
+}
+
+.dots {
+  padding-bottom: 1.5em;
+
+  svg {
+    height: 3em;
+    width: 2em;
+    fill: $base__Color;
+
+    circle {
+      cx: 5;
+      cy: 5;
+      r: 5;
+    }
+  }
+}
+
+//Slider end
+
+//Recommendations
+
+.user__Recommendations {
+  display: grid;
+  height: 50vh;
+  padding: 4em;
+
+  .user__Profil {
+    border-radius: 50%;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .user__ID {
+    display: flex;
+    gap: 1em;
+    justify-self: center;
+    opacity: 80%;
+    height: fit-content;
+    align-items: end;
+
+    .user__Title {
+      font-size: small;
+    }
+
+    .user__Name {
+      font-weight: 600;
+    }
+  }
+
+  .quote__Img {
+    justify-self: center;
+  }
+
+  .recommendation__Content {
+    justify-self: center;
+    text-align: center;
+  }
+}
+
+//END Recommendations
+
+//Team
+
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  padding: 2em;
+  width: fit-content;
+  margin: auto;
+
+  .team__TextContainer {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    padding: 3em;
+    .team__Content {
+      font-family: "Circular-Loom";
+    }
+
+    .team__Headline {
+      font-size: 2.5rem;
+      padding: 10px;
+    }
+  }
+  .team__User {
+    justify-self: center;
+    .team__Profil {
+        cursor: pointer;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    
+
+    .team__ID {
+      text-align: center;
+      padding: 3em 4em;
+      margin: auto;
+      width: fit-content;
+      margin-top: -100px;
+      background-color: rgb(255, 255, 255);
+      position: relative;
+      box-shadow: 2px 2px 2px 2.5px rgba(29, 29, 29, 0.09);
+      cursor: pointer;
+
+      .Name {
+        font-size: 2em;
+        padding-bottom: 8px;
+      }
+    }
+  
+  }
+
+  .team__User:hover{
+      opacity: 80%;
+  } 
+}
+
+//Team END
+
+// Contact form
+
+.contact__Container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+
+  .contact__Img {
+    background-color: rgb(255, 249, 248);
+    width: fit-content;
+
+    img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .form {
+    background-color: rgb(255, 249, 248);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1em;
+    row-gap: 2em;
+    padding: 3em;
+
+    input {
+      padding: 1em;
+      background-color: rgb(255, 249, 248);
+      border: none;
+      border-bottom: solid 0.5px rgba(128, 128, 128, 0.429);
+    }
+    select {
+      padding: 1em;
+      background-color: rgb(255, 249, 248);
+      border: none;
+      border-bottom: solid 0.5px rgba(128, 128, 128, 0.429);
+    }
+
+    .submission {
+      grid-row: 5/6;
+      background-color: $base__Color;
+      width: fit-content;
+      height: fit-content;
+      color: white;
+      font-family: "Circular-Loom";
+      font-size: small;
+      font-weight: 200;
+      padding: 1em;
+      border-radius: 25px;
+      justify-self: start;
+      align-self: end;
+      border: none;
+    }
+  }
+}
+
+// Contact form end
+
+//Footer
+
+//LOGIN
+
+
+.login{
+  display: grid;
+  height: 100vh;
+
+
+  
+  
+
+  .login__Container{
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  box-shadow: 3px 2px 3px 2px rgba(255, 128, 126, 0.503);
+  padding: 2em;
+  gap: 2em;
+
+  form{
+    display: grid;
+    gap: 2em;
+
+    input{
+      padding: 1em 0.5em;
+      border-radius: 10px;
+    }
+  }
+
+  input:focus{
+    background-color: $base__ColorHover;
+  }
+  
+
+  .login__Title{
+    font-family: "Circular-Loom";
+    font-size: xx-large;
+    justify-self: center;
+    
+
+  }
+
+    .email{
+      border: none;
+      font-size: xx-large;
+      color: white;
+      background-color: $base__Color;
+    }
+
+    .password{
+      border: none;
+      font-size: xx-large;
+      color: white;
+      background-color: $base__Color;
+
+     
+    }
+
+    
+
+    ::placeholder{
+      color: white;
+    }
+
+    .login__Submit{
+      width: fit-content;
+      border: none;
+      font-size: xx-large;
+      color: white;
+      background-color:$base__Color;
+      padding: 10px 20px;
+      border-radius: 10px;
+      grid-row: 3/4;
+      grid-column: 1/1;
+
+      
+    }
+    .login__Submit:hover{
+      background-color: $base__ColorHover;
+      
+    }
+  }  
+
+  .login__Jasmine{
+    grid-row: 3/4;
+    grid-column: 1/1;
+    justify-self: end;
+  }
+}
+
+.toggle{
+  font-size: 3rem;
+  color:green;
+  grid-column: 2/3 ;
+  grid-row: 1/2;
+  justify-self: end;
+  align-self: start;
+}
+
+.show__Active, .delete__Hero{
+  font-size: 3em;
+  cursor: pointer;
+  &:hover{
+    color: $logo__BackgroundHover;
+  }
+  
+}
+
+.edit{
+   
+
+    font-size: 3em;
+  
+
+    &:hover{
+      color: $logo__BackgroundHover;
+    }
+  }
+    

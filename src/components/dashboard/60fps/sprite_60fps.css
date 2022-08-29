@@ -1,0 +1,21 @@
+@keyframes play60 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -18000px 0px;
+  }
+}
+.shapeshifter {
+  animation-duration: 1000ms;
+  animation-timing-function: steps(60);
+  width: 300px;
+  height: 300px;
+  animation-fill-mode: forwards;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  
+}
+.shapeshifter.play {
+  animation-name: play60;
+}
